@@ -3,9 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="output.css" />
+    <script src="script.js" defer></script>
     <title>OmniTrack</title>
   </head>
-  <body>
-    <div class="flex p-0"></div>
+  <body class="bg-slate-200">
+    <div class=""></div>
+    <div
+      class="mb-20 h-48 bg-[url('images/anime-banner.png')] bg-cover bg-center"
+    >
+      <div class="container mx-auto flex h-full flex-col justify-center p-6">
+        <h3 class="text-3xl font-extrabold text-gray-100">Explore new anime</h3>
+        <p class="max-w-80 text-sm font-light text-gray-100">
+          Discover your next favorite anime, keep track of your progress, and
+          explore new series to enjoy.
+        </p>
+      </div>
+    </div>
+    <div class="container mx-auto p-6">
+      <h2 class="mb-4 font-mono text-3xl font-bold text-slate-500">
+        Browse Anime
+      </h2>
+      <form class="relative flex w-full items-center" id="form">
+        <img
+          src="icons/icons8-search.svg"
+          alt="Search Icon"
+          class="absolute left-4 h-5 w-5"
+        />
+        <input
+          type="text"
+          id="search"
+          placeholder="Search..."
+          class="w-[500px] rounded-md py-2 pl-12 pr-4 text-sm font-light focus:outline-none focus:ring-2 focus:ring-slate-300"
+        />
+      </form>
+    </div>
+    <div class="container mx-auto px-6">
+      <div class="flex justify-between" id="search-header"></div>
+      <div id="search-container" class="flex flex-wrap gap-4"></div>
+    </div>
+    <div class="container mx-auto p-6">
+      <div class="flex justify-between">
+        <h2
+          class="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500"
+        >
+          Airing This Season
+        </h2>
+        <button
+          id="view-all"
+          class="text-xs font-semibold capitalize tracking-wide text-slate-400"
+        >
+          View all
+        </button>
+      </div>
+      <div id="airing-container" class="flex flex-wrap gap-4"></div>
+    </div>
+    <div class="container mx-auto p-6">
+      <div class="flex justify-between">
+        <h2
+          class="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500"
+        >
+          Featured
+        </h2>
+        <button
+          id="view-all-featured"
+          class="text-xs font-semibold capitalize tracking-wide text-slate-400"
+        >
+          View all
+        </button>
+      </div>
+      <div id="featured-container" class="flex flex-wrap gap-4"></div>
+    </div>
   </body>
 </html>
