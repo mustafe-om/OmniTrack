@@ -213,3 +213,15 @@ viewAllFeatured.addEventListener("click", () => {
 
 populateAnimeList("airing");
 populateAnimeList("featured");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const now = Date.now();
+
+  if (now - lastScroll > 100) {
+    // Adjust threshold as needed
+    lastScroll = now;
+    // Your scroll-related logic here
+  }
+});
