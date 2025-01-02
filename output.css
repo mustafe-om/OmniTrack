@@ -713,8 +713,16 @@ video {
   max-width: 32rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .resize {
   resize: both;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
 }
 
 .grid-cols-2 {
@@ -723,6 +731,10 @@ video {
 
 .grid-cols-\[repeat\(auto-fill\2c _minmax\(125px\2c _1fr\)\)\] {
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+}
+
+.grid-cols-\[repeat\(auto-fill\2c _minmax\(150px\2c _1fr\)\)\] {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .grid-rows-2 {
@@ -757,6 +769,10 @@ video {
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -783,6 +799,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .rounded-md {

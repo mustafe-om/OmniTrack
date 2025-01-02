@@ -94,9 +94,12 @@ function populateAnimeList(type, query = "") {
     switch (type) {
       case "search":
         searchedAnimeList = animeList.filter((anime) => {
-          const title = anime.title_english || anime.title;
+          let title = [];
+          title = [anime.title_english, anime.title];
+
+          console.log(title);
           if (title) {
-            return title.toLowerCase().includes(query.toLowerCase());
+            return title;
           }
         });
         break;
