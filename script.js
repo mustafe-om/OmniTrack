@@ -93,9 +93,12 @@ function populateAnimeList(type, query = "") {
   fetchAnimeList(type, query).then((animeList) => {
     switch (type) {
       case "search":
-        searchedAnimeList = animeList.filter((anime) =>
-          anime.title.toLowerCase().includes(query.toLowerCase()),
-        );
+        searchedAnimeList = animeList.filter((anime) => {
+          const title = anime.title_english || anime.title;
+          if (title) {
+            return title.toLowerCase().includes(query.toLowerCase());
+          }
+        });
         break;
 
       case "top100":
